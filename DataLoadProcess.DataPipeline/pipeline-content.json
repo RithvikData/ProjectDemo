@@ -1,0 +1,102 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "DelimitedTextSource",
+            "formatSettings": {
+              "type": "DelimitedTextReadSettings"
+            },
+            "storeSettings": {
+              "type": "LakehouseReadSettings",
+              "recursive": true,
+              "wildcardFolderPath": "development",
+              "wildcardFileName": "*.csv",
+              "enablePartitionDiscovery": false
+            },
+            "datasetSettings": {
+              "type": "DelimitedText",
+              "typeProperties": {
+                "location": {
+                  "type": "LakehouseLocation"
+                },
+                "columnDelimiter": ",",
+                "quoteChar": "\"",
+                "escapeChar": "\\",
+                "firstRowAsHeader": true
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "D_LH",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "a5b121f4-7f9a-4fe9-ad20-2807bad48b00",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Files"
+                  },
+                  "externalReferences": {
+                    "connection": "c4242a9d-ef14-4194-b842-594ac32ce556"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "Append",
+            "applyVOrder": false,
+            "enableTimestampNtz": false,
+            "partitionOption": "None",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "schema": "dbo",
+                "table": "EmpDataInfo"
+              },
+              "schema": [],
+              "connectionSettings": {
+                "name": "D_LH",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "a5b121f4-7f9a-4fe9-ad20-2807bad48b00",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "externalReferences": {
+                    "connection": "c4242a9d-ef14-4194-b842-594ac32ce556"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Data Load",
+        "dependsOn": []
+      }
+    ]
+  }
+}
