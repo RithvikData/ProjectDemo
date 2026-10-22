@@ -24,6 +24,12 @@
       "note": "",
       "type": "String",
       "value": "ea8c902f-c51f-4154-8456-25cb5782d40b"
+    },
+    {
+      "name": "LakehouseId",
+      "note": "",
+      "type": "String",
+      "value": "f9eae0f2-a297-41ac-82ef-5f6211f442fe"
     }
   ]
 }

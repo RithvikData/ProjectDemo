@@ -13,6 +13,10 @@
     {
       "name": "SQLConnString",
       "value": "5xcs7x7kpcvevar77xqwdhf644-z6hjx4xrtx3e7ath7lh5qgn7f4.datawarehouse.fabric.microsoft.com"
+    },
+    {
+      "name": "LakehouseId",
+      "value": "ac253965-0b6b-44ca-964e-5db1930b5bc3"
     }
   ]
 }
