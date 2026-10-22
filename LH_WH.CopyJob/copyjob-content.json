@@ -20,12 +20,24 @@
       "connectionSettings": {
         "type": "DataWarehouse",
         "typeProperties": {
-          "workspaceId": "00000000-0000-0000-0000-000000000000",
-          "artifactId": "9f93e482-6cf7-4abc-9194-3f7e38cff746",
-          "endPoint": "5xcs7x7kpcvevar77xqwdhf644-kzcxvz63edmeng7pa7dfpdlrkm.datawarehouse.fabric.microsoft.com"
+          "workspaceIdVariableLibrary": {
+            "variableName": "WorkspaceId",
+            "libraryName": "DynamicConnection"
+          },
+          "artifactIdVariableLibrary": {
+            "variableName": "WHId",
+            "libraryName": "DynamicConnection"
+          },
+          "endpointVariableLibrary": {
+            "variableName": "SQLConnString",
+            "libraryName": "DynamicConnection"
+          }
         },
         "externalReferences": {
-          "connection": "ea8c902f-c51f-4154-8456-25cb5782d40b"
+          "connectionVariableLibrary": {
+            "variableName": "WHConnId",
+            "libraryName": "DynamicConnection"
+          }
         }
       }
     },

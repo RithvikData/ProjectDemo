@@ -10,7 +10,7 @@
               "type": "DelimitedTextReadSettings"
             },
             "storeSettings": {
-              "type": "LakehouseReadSettings",
+              "type": "AzureBlobStorageReadSettings",
               "recursive": true,
               "wildcardFolderPath": "development",
               "wildcardFileName": "*.csv",
@@ -112,16 +112,16 @@
               },
               "schema": [],
               "connectionSettings": {
-                "name": "TempDW",
+                "name": "c236f94e_702d_49c0_b9e1_3d2d46fabc5f",
                 "properties": {
                   "type": "DataWarehouse",
                   "typeProperties": {
-                    "artifactId": "9f93e482-6cf7-4abc-9194-3f7e38cff746",
-                    "endpoint": "5xcs7x7kpcvevar77xqwdhf644-kzcxvz63edmeng7pa7dfpdlrkm.datawarehouse.fabric.microsoft.com",
-                    "workspaceId": "00000000-0000-0000-0000-000000000000"
+                    "artifactId": "@pipeline().libraryVariables.DynamicConnection_WHId",
+                    "endpoint": "@pipeline().libraryVariables.DynamicConnection_SQLConnString",
+                    "workspaceId": "@pipeline().libraryVariables.DynamicConnection_WorkspaceId"
                   },
                   "externalReferences": {
-                    "connection": "ea8c902f-c51f-4154-8456-25cb5782d40b"
+                    "connection": "@pipeline().libraryVariables.DynamicConnection_WHConnId"
                   },
                   "annotations": []
                 }
@@ -187,6 +187,28 @@
           }
         ]
       }
-    ]
+    ],
+    "libraryVariables": {
+      "DynamicConnection_WorkspaceId": {
+        "type": "String",
+        "variableName": "WorkspaceId",
+        "libraryName": "DynamicConnection"
+      },
+      "DynamicConnection_WHId": {
+        "type": "String",
+        "variableName": "WHId",
+        "libraryName": "DynamicConnection"
+      },
+      "DynamicConnection_SQLConnString": {
+        "type": "String",
+        "variableName": "SQLConnString",
+        "libraryName": "DynamicConnection"
+      },
+      "DynamicConnection_WHConnId": {
+        "type": "String",
+        "variableName": "WHConnId",
+        "libraryName": "DynamicConnection"
+      }
+    }
   }
 }
