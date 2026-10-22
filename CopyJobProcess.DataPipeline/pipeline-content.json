@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "InvokeCopyJob",
+        "typeProperties": {
+          "copyJobId": "e574fb5c-659b-9b43-49cc-b3b8442c1086",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "externalReferences": {
+          "connection": "92a43698-ec43-489a-ab9c-ab6e1d20a751"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Lakehouse",
+        "dependsOn": []
+      },
+      {
+        "type": "InvokeCopyJob",
+        "typeProperties": {
+          "copyJobId": "050a39d6-a52c-9932-43f9-7d590e28eb01",
+          "workspaceId": "00000000-0000-0000-0000-000000000000"
+        },
+        "externalReferences": {
+          "connection": "92a43698-ec43-489a-ab9c-ab6e1d20a751"
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Warehouse",
+        "dependsOn": [
+          {
+            "activity": "Lakehouse",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

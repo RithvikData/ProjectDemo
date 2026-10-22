@@ -1,0 +1,83 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "LakehouseTable",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "a5b121f4-7f9a-4fe9-ad20-2807bad48b00",
+          "rootFolder": "Tables"
+        },
+        "externalReferences": {
+          "connection": "c4242a9d-ef14-4194-b842-594ac32ce556"
+        }
+      }
+    },
+    "destination": {
+      "type": "DataWarehouseTable",
+      "connectionSettings": {
+        "type": "DataWarehouse",
+        "typeProperties": {
+          "workspaceIdVariableLibrary": {
+            "variableName": "WorkspaceId",
+            "libraryName": "DynamicConnection"
+          },
+          "artifactIdVariableLibrary": {
+            "variableName": "WHId",
+            "libraryName": "DynamicConnection"
+          },
+          "endpointVariableLibrary": {
+            "variableName": "SQLConnString",
+            "libraryName": "DynamicConnection"
+          }
+        },
+        "externalReferences": {
+          "connectionVariableLibrary": {
+            "variableName": "WHConnId",
+            "libraryName": "DynamicConnection"
+          }
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00",
+      "retry": 0
+    }
+  },
+  "activities": [
+    {
+      "id": "3db14489-4b68-4c6b-8865-94f5a01e3a1e",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "EmpDataInfo"
+          },
+          "partitionSettings": {
+            "partitionOption": "None"
+          }
+        },
+        "destination": {
+          "tableOption": "autoCreate",
+          "writeBehavior": "Append",
+          "datasetSettings": {
+            "schema": "dbo",
+            "table": "EmpDataInfoData"
+          }
+        },
+        "enableStaging": true,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}
