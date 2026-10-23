@@ -12,8 +12,8 @@ shared WorkspaceId = Variable.ValueOrDefault("$(/**/DynamicConnection/WorkspaceI
 shared WarehouseId = Variable.ValueOrDefault("$(/**/DynamicConnection/WHId)", "b7aba28d-8bce-46b6-b4b9-58f3f9b75d79");
 shared EmpDataInfo_DataDestination = let
   Pattern = Fabric.Warehouse([CreateNavigationProperties = false, HierarchicalNavigation = null]),
-  Navigation_1 = Pattern{[workspaceId = "e77a4556-20db-46d8-9bef-07c6578d7153"]}[Data],
-  Navigation_2 = Navigation_1{[warehouseId = "b7aba28d-8bce-46b6-b4b9-58f3f9b75d79"]}[Data],
+  Navigation_1 = Pattern{[workspaceId = WorkspaceId]}[Data],
+  Navigation_2 = Navigation_1{[warehouseId = WarehouseId]}[Data],
   TableNavigation = Navigation_2{[Schema = "dbo", Item = "EmpDataInfo"]}[Data]
 in
   TableNavigation;
