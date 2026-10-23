@@ -1,0 +1,43 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {
+    "allowModernEvaluationEngine": true
+  },
+  "name": "LH_DF",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "EmpDataInfo": {
+      "queryId": "40d7f7e8-66de-4555-ae55-7525fea39bf3",
+      "queryName": "EmpDataInfo"
+    },
+    "WorkspaceId": {
+      "queryId": "a9d7c2e1-d254-4cc0-b6ed-d87397c0b0ca",
+      "queryName": "WorkspaceId",
+      "loadEnabled": false
+    },
+    "WarehouseId": {
+      "queryId": "8cbcf6c6-eb3d-4e01-b9b7-459070b9b424",
+      "queryName": "WarehouseId",
+      "loadEnabled": false
+    },
+    "EmpDataInfo_DataDestination": {
+      "queryId": "c1800538-cd5e-4829-899a-951623c135db",
+      "queryName": "EmpDataInfo_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"3011fb2a-dda1-45ed-abf1-c2e73818b61c\",\"DatasourceId\":\"c4242a9d-ef14-4194-b842-594ac32ce556\"}"
+    },
+    {
+      "path": "Warehouse",
+      "kind": "Warehouse",
+      "connectionId": "{\"ClusterId\":\"3011fb2a-dda1-45ed-abf1-c2e73818b61c\",\"DatasourceId\":\"ea8c902f-c51f-4154-8456-25cb5782d40b\"}"
+    }
+  ]
+}
