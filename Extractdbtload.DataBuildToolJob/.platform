@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataBuildToolJob",
+    "displayName": "Extractdbtload"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d27f6751-4fcd-8c37-4597-be3147414967"
+  }
+}

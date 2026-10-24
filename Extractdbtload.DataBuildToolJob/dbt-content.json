@@ -1,0 +1,29 @@
+{
+  "project": {
+    "projectType": "OneLake",
+    "folderPath": "dbt"
+  },
+  "profile": {
+    "profileType": "DataWarehouse",
+    "schema": "dbo",
+    "externalReferences": {},
+    "connectionSettings": {
+      "name": "TempDW",
+      "properties": {
+        "type": "DataWarehouse",
+        "typeProperties": {
+          "workspaceId": "$(/**/DynamicConnection/WorkspaceId)",
+          "artifactId": "$(/**/DynamicConnection/WHId)",
+          "endPoint": "$(/**/DynamicConnection/SQLConnString)"
+        }
+      }
+    }
+  },
+  "command": {
+    "operation": "build",
+    "arguments": {
+      "exclude": "",
+      "threads": 4
+    }
+  }
+}
