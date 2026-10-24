@@ -1,0 +1,50 @@
+version: 2
+sources:
+  - name: dbo
+    description: Source data from dbo
+    tables:
+      - name: EmpDataInfo
+        description: Source table EmpDataInfo
+        columns:
+          - name: EmpId
+            description: Column EmpId in EmpDataInfo
+          - name: EmpName
+            description: Column EmpName in EmpDataInfo
+          - name: Salary
+            description: Column Salary in EmpDataInfo
+          - name: DeptName
+            description: Column DeptName in EmpDataInfo
+          - name: Location
+            description: Column Location in EmpDataInfo
+          - name: Country
+            description: Column Country in EmpDataInfo
+      - name: EmpDataInfoData
+        description: Source table EmpDataInfoData
+        columns:
+          - name: EmpId
+            description: Column EmpId in EmpDataInfoData
+          - name: EmpName
+            description: Column EmpName in EmpDataInfoData
+          - name: Salary
+            description: Column Salary in EmpDataInfoData
+          - name: DeptName
+            description: Column DeptName in EmpDataInfoData
+          - name: Location
+            description: Column Location in EmpDataInfoData
+          - name: Country
+            description: Column Country in EmpDataInfoData
+      - name: SalesData
+        description: Source table SalesData
+        columns:
+          - name: EmpId
+            description: Column EmpId in SalesData
+          - name: EmpName
+            description: Column EmpName in SalesData
+          - name: Salary
+            description: Column Salary in SalesData
+          - name: DeptName
+            description: Column DeptName in SalesData
+          - name: Location
+            description: Column Location in SalesData
+          - name: Country
+            description: Column Country in SalesData
