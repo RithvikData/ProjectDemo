@@ -1,0 +1,65 @@
+table EmpDataInfo
+	lineageTag: 0c75bdd0-278a-4e02-8412-930ad59cf4c8
+	sourceLineageTag: [dbo].[EmpDataInfo]
+
+	column EmpId
+		dataType: string
+		lineageTag: 9252a6bb-6918-4aca-8d6b-5f3c7f3393bb
+		sourceLineageTag: EmpId
+		summarizeBy: none
+		sourceColumn: EmpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmpName
+		dataType: string
+		lineageTag: 1fbcdcf0-a395-42db-b682-96ed2bd4a585
+		sourceLineageTag: EmpName
+		summarizeBy: none
+		sourceColumn: EmpName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salary
+		dataType: string
+		lineageTag: 7a804ecb-2b8c-4096-a25d-e53e5ab8e08e
+		sourceLineageTag: Salary
+		summarizeBy: none
+		sourceColumn: Salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeptName
+		dataType: string
+		lineageTag: c7611289-e88d-44c1-a7b5-53130445e758
+		sourceLineageTag: DeptName
+		summarizeBy: none
+		sourceColumn: DeptName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 02709f78-69a3-4d4a-8261-1f49acac80f3
+		sourceLineageTag: Location
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 9a9affec-7375-49c6-b6ac-3f2ab40176b3
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition EmpDataInfo = entity
+		mode: directLake
+		source
+			entityName: EmpDataInfo
+			schemaName: dbo
+			expressionSource: 'DirectLake - D_LH'
+

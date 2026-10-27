@@ -13,4 +13,5 @@ annotation PBI_QueryOrder = ["DirectLake - D_LH"]
 annotation PBI_ProTooling = ["DirectLakeOnOneLakeInWeb"]
 
 ref table FinalSalesData
+ref table EmpDataInfo
 
