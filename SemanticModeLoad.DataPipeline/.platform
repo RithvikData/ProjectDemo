@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "SemanticModeLoad"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "44042d98-bf2a-baf8-4353-181c145f59f7"
+  }
+}

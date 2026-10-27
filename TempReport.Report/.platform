@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "TempReport"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eaa42cf3-a728-ad82-4e88-88ecf9434a89"
+  }
+}

@@ -10,7 +10,7 @@
               "type": "DelimitedTextReadSettings"
             },
             "storeSettings": {
-              "type": "LakehouseReadSettings",
+              "type": "AzureBlobStorageReadSettings",
               "recursive": true,
               "wildcardFolderPath": "development",
               "wildcardFileName": "*.csv",
