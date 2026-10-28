@@ -1,0 +1,65 @@
+table FinalSalesData
+	lineageTag: 9f0daee2-f418-474f-af8a-36f28478ac3a
+	sourceLineageTag: [dbo].[FinalSalesData]
+
+	column EmpId
+		dataType: string
+		lineageTag: 8c68ab75-9215-4e43-a07d-c87eac0a5cdd
+		sourceLineageTag: EmpId
+		summarizeBy: none
+		sourceColumn: EmpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmpName
+		dataType: string
+		lineageTag: f10b1323-263c-44eb-928b-bfa5f4384b09
+		sourceLineageTag: EmpName
+		summarizeBy: none
+		sourceColumn: EmpName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salary
+		dataType: string
+		lineageTag: 554d3f9d-3fb5-4799-ae9d-2a74dcf2eca4
+		sourceLineageTag: Salary
+		summarizeBy: none
+		sourceColumn: Salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeptName
+		dataType: string
+		lineageTag: 7d3b1b57-dc13-4587-b069-9880e84409f0
+		sourceLineageTag: DeptName
+		summarizeBy: none
+		sourceColumn: DeptName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 78604003-991e-4a36-a577-be3867c341e4
+		sourceLineageTag: Location
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: a87370a3-5cc3-4fbf-9eda-f7efd5629b94
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FinalSalesData = entity
+		mode: directLake
+		source
+			entityName: FinalSalesData
+			schemaName: dbo
+			expressionSource: 'DirectLake - D_LH'
+

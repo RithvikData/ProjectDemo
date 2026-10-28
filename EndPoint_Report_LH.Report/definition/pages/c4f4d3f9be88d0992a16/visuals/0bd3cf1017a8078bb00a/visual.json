@@ -1,0 +1,211 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "0bd3cf1017a8078bb00a",
+  "position": {
+    "x": 154.12244897959184,
+    "y": 47.020408163265309,
+    "z": 0,
+    "height": 809.795918367347,
+    "width": 1452.408163265306,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "Country"
+                }
+              },
+              "queryRef": "FinalSalesData.Country",
+              "nativeQueryRef": "Country"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "DeptName"
+                }
+              },
+              "queryRef": "FinalSalesData.DeptName",
+              "nativeQueryRef": "DeptName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "EmpId"
+                }
+              },
+              "queryRef": "FinalSalesData.EmpId",
+              "nativeQueryRef": "EmpId"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "EmpName"
+                }
+              },
+              "queryRef": "FinalSalesData.EmpName",
+              "nativeQueryRef": "EmpName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "Location"
+                }
+              },
+              "queryRef": "FinalSalesData.Location",
+              "nativeQueryRef": "Location"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FinalSalesData"
+                    }
+                  },
+                  "Property": "Salary"
+                }
+              },
+              "queryRef": "FinalSalesData.Salary",
+              "nativeQueryRef": "Salary"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "21D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "05b518c31c0a8410c98d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "Country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "118d96feae47770bb3e1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "DeptName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "20e733c45121a166547a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "EmpId"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "36134f67b064085040cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "EmpName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "50f8608c120776903e85",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "Location"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a8a33db9b119c4e4a0cd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "FinalSalesData"
+              }
+            },
+            "Property": "Salary"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

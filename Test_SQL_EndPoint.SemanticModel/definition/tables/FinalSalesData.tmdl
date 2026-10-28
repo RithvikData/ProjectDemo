@@ -1,0 +1,73 @@
+table FinalSalesData
+	lineageTag: bb944f18-de2f-4e8f-b962-cf973f1a5f97
+	sourceLineageTag: [dbo].[FinalSalesData]
+
+	column EmpId
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 248dc2fa-cb30-4a25-acbc-67bf2dd1fbd2
+		sourceLineageTag: EmpId
+		summarizeBy: none
+		sourceColumn: EmpId
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmpName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c96d2048-c9b7-4443-bac7-f621854a5c53
+		sourceLineageTag: EmpName
+		summarizeBy: none
+		sourceColumn: EmpName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Salary
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 17123cba-b5a8-4127-8ba1-66461eaa993c
+		sourceLineageTag: Salary
+		summarizeBy: none
+		sourceColumn: Salary
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeptName
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 1132ce02-3172-4439-8172-ab14ab30e18e
+		sourceLineageTag: DeptName
+		summarizeBy: none
+		sourceColumn: DeptName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: a8b8efbb-6310-4d9d-818a-a1e2fcd84e4c
+		sourceLineageTag: Location
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 0a6af603-75bd-4048-91a0-46e7f298f144
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FinalSalesData = entity
+		mode: directLake
+		source
+			entityName: FinalSalesData
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+

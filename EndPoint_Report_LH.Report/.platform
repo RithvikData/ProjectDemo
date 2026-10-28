@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "EndPoint_Report_LH"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "664d9592-a203-421f-900d-c8b1337a6952"
+  }
+}
